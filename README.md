@@ -3,7 +3,7 @@ EasyQuiz: hệ thống quản lý bài tập trắc nghiệm.
 
 ## Demo
 
-Xem trang web [tại đây](https://huonggiangbui.github.io/).
+Xem trang web [tại đây](https://huonggiangbui.github.io/EasyQuiz).
 
 Tài khoản học sinh: student@easyquiz.com - 123456
 
