@@ -1,0 +1,66 @@
+.container {
+  position: relative;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border: none;
+  background: none;
+  color: black;
+  padding: 20px;
+}
+
+footer {
+  background-color: black;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  margin-top: 5em;
+  width: 100%;
+}
+
+.footer-copyright {
+  padding-bottom: 1em;
+  padding-top: 1em;
+  margin-top: 0;
+  width: 100%;
+}
+
+footer .row {
+  width: 85%;
+  margin: auto;
+  padding-top: 1em;
+  text-align: center;
+}
+
+.li-ic,
+.fb-ic,
+.git-ic {
+  margin-right: 2em;
+}
+
+.li-ic:hover{
+  text-decoration: none;
+}
+
+.fb-ic:hover{
+  text-decoration: none;
+}
+
+.item {
+  padding: 20px;
+  margin-bottom: 0em;
+}
+
+.item i {
+  color: white;
+}
+
+.contact{
+    padding-left: 2em; 
+    display: flex; 
+}

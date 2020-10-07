@@ -1,0 +1,14 @@
+.container {
+  position: relative;
+}
+
+.flex-container {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  margin: 20px 0px;
+}

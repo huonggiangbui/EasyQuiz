@@ -1,0 +1,41 @@
+.container {
+    position: relative;
+}
+    
+.bottomRight {
+    background-color: #447CFC;
+    color: white;
+    position: absolute;
+    top: 30%;
+    font-size: 18px;
+    border: none;
+    width: 40%;
+}
+.demo1 {
+    background: url("../../assets/image1.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.demo2 {
+    background: url("../../assets/image2.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.demo3 {
+    background: url("../../assets/image3.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+    .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border: none;
+    background: none;
+    color: black;
+    padding: 20px;
+    }
