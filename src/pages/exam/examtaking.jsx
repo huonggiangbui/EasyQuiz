@@ -183,7 +183,7 @@ export default function TakingExamPage({ userData }) {
                   return (
                     <Grid container spacing={2} className={classes.question}>
                       <Typography variant="subtitle1">
-                        {`Question ${questionId}`}
+                        {`${question.title}`}
                       </Typography>
                       <Grid item xs={12}>
                         <FormGroup column>
