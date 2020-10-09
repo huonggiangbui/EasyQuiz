@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fbf9ba6d6fd8d70d846b029882f82401",
+    "revision": "a0928e80c8640ee731f0de70e68cf7ee",
     "url": "/EasyQuiz/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/EasyQuiz/static/css/2.c37a399a.chunk.css"
   },
   {
-    "revision": "6ae77f67ba97000a9f2f",
+    "revision": "d1884ec2bd9cc14ceb65",
     "url": "/EasyQuiz/static/css/main.da609efd.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/EasyQuiz/static/js/2.3e106efe.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6ae77f67ba97000a9f2f",
-    "url": "/EasyQuiz/static/js/main.f91b25b7.chunk.js"
+    "revision": "d1884ec2bd9cc14ceb65",
+    "url": "/EasyQuiz/static/js/main.6b6e12e9.chunk.js"
   },
   {
     "revision": "f101550ab23d0915338e",
