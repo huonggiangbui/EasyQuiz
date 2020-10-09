@@ -74,7 +74,7 @@ export default function SignUpPage() {
   const [importedClasses, setimportedClasses] = useState();
   const [finalClasses, setFinalClasses] = useState([]);
   
-  const [userSchoolId, setUserSchoolId] = useState("");
+  let userSchoolId;
   const [importedSchools, setImportedSchools] = useState([]);
   const [finalSchools, setFinalSchools] = useState([]);
   
@@ -189,7 +189,7 @@ export default function SignUpPage() {
             classId: userClassId
           })
           .then((docRef) => {
-            setUserSchoolId(docRef.id)
+            userSchoolId = docRef.id
           })
       } catch (error) {
         console.log("Error while saving school" + error.message);
@@ -204,11 +204,12 @@ export default function SignUpPage() {
               classId: firebase.firestore.FieldValue.arrayUnion(...newClassId)
             })
         }
-        setUserSchoolId(finalSchools.schoolId)
+        userSchoolId = finalSchools.schoolId;
       } catch (error) {
         console.log("Error while saving school" + error.message);
       }
     }
+    console.log(userSchoolId)
 
 
     await db
