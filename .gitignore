@@ -24,4 +24,5 @@ yarn-error.log*
 
 /node_modules
 package-lock.json
-.env.development
+/.env.development
+/.env.production

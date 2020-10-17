@@ -5,12 +5,19 @@ import { firestore as db } from '../../firebase/firebase.util.js';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
 
 import SelectStudentTestComponent from './chooseStudentTest';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+  },
+  header: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    marginBottom: theme.spacing(3),
   },
   paper: {
     padding: theme.spacing(4),
@@ -41,17 +48,22 @@ export default function StudentSelectionComponent({ classId }) {
 
   return (
     <div className={classes.root} style={{ marginTop: 60 }}>
+      <div className={classes.header}>
+        <Typography component="h1" variant="h5">
+          {subject ? "Chọn bài kiểm tra" : "Chọn môn học"}
+        </Typography>
+      </div>
       {subject 
       ? <SelectStudentTestComponent filterTestId={importedTestId} testSubject={subject} /> 
         : <Grid container spacing={3}>
           <Grid item xs>
             <Link onClick={() => setSubject("Mathematics")}>
-              <Paper className={classes.paper}>Mathematic</Paper>
+              <Paper className={classes.paper}>Toán học</Paper>
             </Link>
           </Grid>
           <Grid item xs>
             <Link onClick={() => setSubject("Literature")}>
-              <Paper className={classes.paper}>Literature</Paper>
+              <Paper className={classes.paper}>Văn học</Paper>
             </Link>
           </Grid>
         </Grid>}

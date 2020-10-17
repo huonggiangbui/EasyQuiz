@@ -209,8 +209,6 @@ export default function SignUpPage() {
         console.log("Error while saving school" + error.message);
       }
     }
-    console.log(userSchoolId)
-
 
     await db
       .doc(`/users/${inputValues.email}`)

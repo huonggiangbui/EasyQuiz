@@ -5,10 +5,17 @@ import { auth, firestore as db } from '../../firebase/firebase.util.js';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+  },
+  header: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    marginBottom: theme.spacing(3),
   },
   paper: {
     padding: theme.spacing(4),
@@ -39,6 +46,14 @@ export default function TeacherSelectionComponent() {
   
   return (
     <div className={classes.root} style={{ marginTop: 60 }}>
+      {teacherTest.length !== 0 
+      ? null 
+        : <div className={classes.header}>
+            <Typography component="h1" variant="h5">
+              Bạn chưa tạo bài kiểm tra nào
+            </Typography>
+          </div>
+      }
       <Grid container spacing={3}>
         {teacherTest.map((singleTest) => {
           return (

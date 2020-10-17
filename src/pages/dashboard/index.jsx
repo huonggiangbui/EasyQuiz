@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { auth, firestore as db } from '../../firebase/firebase.util.js';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Avatar from '@material-ui/core/Avatar';
@@ -47,7 +46,7 @@ export default function Dashboard({userData}) {
           <HomeIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Dashboard
+          Quản lý bài kiểm tra
         </Typography>
       </div>
       <div style={{ padding: 30 }}>
@@ -56,7 +55,7 @@ export default function Dashboard({userData}) {
             <Grid container spacing={3}>
               <Grid item xs = {12}>
                 <Link to="/createTest">
-                  <Paper className={classes.paper}>Add Test</Paper>
+                  <Paper className={classes.paper}>Thêm bài kiểm tra</Paper>
                 </Link>
               </Grid>
               <TeacherSelectionComponent />

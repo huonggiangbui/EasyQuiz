@@ -90,11 +90,11 @@ export default function TestComponent({ onChange, numOfQuestion }) {
 
   const questionType = [
     {
-      label: 'One Correct Answer',
+      label: 'Chọn một đáp án đúng',
       value: 'radio'
     },
     {
-      label: 'Multiple Correct Answer',
+      label: 'Chọn nhiều đáp án đúng',
       value: 'checkbox'
     }
   ];
@@ -192,7 +192,7 @@ export default function TestComponent({ onChange, numOfQuestion }) {
       <div className={classes.paper}>
         <div className={classes.header}>
           <Typography component="h1" variant="h5">
-            Question Section
+            Thông tin câu hỏi
           </Typography>
         </div>
         <div className={classes.root}>
@@ -210,12 +210,12 @@ export default function TestComponent({ onChange, numOfQuestion }) {
               return (
                 <Grid container spacing={2} className={classes.question}>
                   <Typography variant="subtitle1">
-                    {`Question ${questionId}`}
+                    {`Câu hỏi ${questionId}`}
                     </Typography>
                   <Grid item xs={12}>
                     <TextField
                       id={questionId}
-                      label="Question Title"
+                      label="Câu hỏi"
                       name="title"
                       multiline
                       required
@@ -228,7 +228,7 @@ export default function TestComponent({ onChange, numOfQuestion }) {
                   </Grid>
                   <Grid item xs={12}>
                     <Typography variant="subtitle1">
-                      Question Type
+                      Dạng câu hỏi
                     </Typography>
                     <Select
                       name="type"
@@ -241,7 +241,7 @@ export default function TestComponent({ onChange, numOfQuestion }) {
                   </Grid>
                   <Grid item xs={12}>
                     <Typography variant="subtitle1">
-                      Question Point
+                      Điểm của câu hỏi
                     </Typography>
                     <Select
                       name="point"

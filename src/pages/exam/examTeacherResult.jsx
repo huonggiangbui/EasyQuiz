@@ -20,6 +20,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function TeacherResult() {
+  const [totalPoint, updateTotalPoint] = useState(0)
+
   const [allStudents, updateAllStudents] = useState([])
   const [assignedClass, updateAssignedClass] = useState([])
   const [selectedClass, updateSelectedClass] = useState()
@@ -41,7 +43,8 @@ export default function TeacherResult() {
         if (!doc.exists) {
           return alert('No test with this ID')
         }
-        return updateAllStudents(doc.data().result)
+        updateAllStudents(doc.data().result)
+        updateTotalPoint(doc.data().totalPoint)
       })
 
     db
@@ -52,19 +55,6 @@ export default function TeacherResult() {
           .filter(doc => doc.data().testId.includes(testId))
           .map(doc => ({ ...doc.data(), classId: doc.id })))
       })
-
-    // const studentId = allStudents.map(student => student.userId)
-
-    // if (selectedClass) {
-    //   db
-    //   .collection("users")
-    //   .get()
-    //   .then(snapshot => {
-    //     updateAllStudents(snapshot.docs
-    //       .filter(doc => studentId.includes(doc.id) && selectedClass === doc.data().classId[0])
-    //       .map(doc => ({ ...doc.data(), userId: doc.id })))
-    //   })
-    // }
     
   }, [testId, selectedClass])
 
@@ -118,7 +108,6 @@ export default function TeacherResult() {
 
   return (
     <div className='container'>
-      {console.log(allStudents)}
       {selectedClass 
       ? <>
           <Table
@@ -134,13 +123,13 @@ export default function TeacherResult() {
           //   history.push(``)
           // }}
           >
-            <Column width={150} align="justify" fixed>
-              <HeaderCell style={{ color: "black", fontSize: "medium", fontWeight: "600" }}>Name</HeaderCell>
+            <Column width={200} align="justify" fixed>
+              <HeaderCell style={{ color: "black", fontSize: "medium", fontWeight: "600" }}>Tên học sinh</HeaderCell>
               <Cell dataKey="name" />
             </Column>
 
-            <Column width={180} align="justify">
-              <HeaderCell style={{ color: "black", fontSize: "medium", fontWeight: "600" }}>Point</HeaderCell>
+            <Column width={200} align="justify">
+              <HeaderCell style={{ color: "black", fontSize: "medium", fontWeight: "600" }}>{`Điểm/${totalPoint}`}</HeaderCell>
               <Cell dataKey="point" />
             </Column>
           </Table>

@@ -206,7 +206,6 @@ export default function CreateTestPage({ userData }) {
 
   return (
     <Container component="main" maxWidth="xs">
-      {console.log(inputValues)}
       <CssBaseline />
       <div className={classes.paper}>
         <div className={classes.header}>
@@ -214,7 +213,7 @@ export default function CreateTestPage({ userData }) {
             <AssignmentOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            Create New Test
+            Tạo bài kiểm tra mới
           </Typography>
         </div>
         <div className={classes.root}>
@@ -227,7 +226,7 @@ export default function CreateTestPage({ userData }) {
                   required
                   fullWidth
                   id="title"
-                  label="Test Title"
+                  label="Tiêu đề bài kiểm tra"
                   autoFocus
                   value={inputValues.title}
                   onChange={(event) => handleChange(event)}
@@ -235,7 +234,7 @@ export default function CreateTestPage({ userData }) {
               </Grid>
               <Grid item xs={12}>
                 <Typography variant="subtitle1">
-                  Class
+                  Lớp sử dụng bài kiểm tra
                 </Typography>
                 <Select
                   isMulti
@@ -249,13 +248,13 @@ export default function CreateTestPage({ userData }) {
               <Grid item xs={12}>
                 <TextField
                   id="outlined-multiline-static"
-                  label="Test Description"
+                  label="Mô tả bài kiểm tra"
                   name="description"
                   multiline
                   required
                   fullWidth
                   rows={5}
-                  placeholder="Please describe your test here."
+                  placeholder="Nhập mô tả/hướng dẫn về bài kiểm tra tại đây."
                   variant="outlined"
                   value={inputValues.description}
                   onChange={(event) => handleChange(event)}
@@ -268,7 +267,7 @@ export default function CreateTestPage({ userData }) {
                   required
                   fullWidth
                   id="time"
-                  label="Time (in minute)"
+                  label="Thời gian làm bài (tính theo phút)"
                   autoFocus
                   value={inputValues.time}
                   onChange={(event) => handleChange(event)}
@@ -276,7 +275,7 @@ export default function CreateTestPage({ userData }) {
               </Grid>
               <Grid item xs={12}>
                 <Typography variant="subtitle1">
-                  Numbers of Question
+                  Số câu hỏi
                 </Typography>
                 <Select
                   name="numOfQuestion"
@@ -309,13 +308,13 @@ export default function CreateTestPage({ userData }) {
               onClick={handleSubmit}
               className={classes.button}
             >
-              Create
+              Tạo bài kiểm tra
             </Button>
           </div>
           <div>
             <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
               <Alert onClose={handleClose} severity="error">
-                Please check your information again.
+                Đã xảy ra lỗi. Hãy xem lại thông tin bài kiểm tra.
               </Alert>
             </Snackbar>
           </div>
